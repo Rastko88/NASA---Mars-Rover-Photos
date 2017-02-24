@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NASA - Mars Rover Photos</title>
+	<link rel="stylesheet" type="text/css" href="nasa.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	 <!-- Load jQuery and jQuery UI -->
+	 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+	<script type="text/javascript" src="nasa.js"></script>
+
+</head>
+<body>
+
+
+<div id="left">
+	<div class="sel-img clearfix">
+		<img class="rover" id="curiosity" src="http://www.space.com/images/i/000/007/679/original/curiosity-mars-rover.jpg?interpolation=lanczos-none&downsize=*:1000" onclick="selectRover(this.id)" >
+		<img class="rover" id="opportunity" src="http://mars.nasa.gov/images/rover21-full.jpg" onclick="selectRover(this.id)">
+		<img class="rover" id="spirit" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/NASA_Mars_Rover.jpg" onclick="selectRover(this.id)">
+	</div>
+	<div class="text">
+	</div>
+
+	<div class="sel_sol">
+		<input id="slider" type="range" name="sol" min="0" max=data.photo_manifest.max_sol; onmousemove="setCurrentSOL(this.value)">
+		<div><label id="currentSliderValue">0</label></div>
+	</div>
+
+	<ul id = "sel_cam">
+		<li><input type="radio" name="camera" value="FHAZ"> FHAZ</li>
+		<li><input type="radio" name="camera" value="MAST"> MAST</li>
+		<li><input type="radio" name="camera" value="PANCAM"> PANCAM</li>
+	</ul>
+
+    <button class="show" onclick="getImages()">Launch me to Mars! <i class="fa fa-rocket" aria-hidden="true"></i> </i></button>
+
+</div>
+
+<div id="right"></div>
+
+</body>
+
+
+</html>
+
+
+
